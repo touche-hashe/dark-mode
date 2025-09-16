@@ -1,0 +1,267 @@
+/* start global value */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* variables css */
+
+/* end variabes css */
+/* start components class */
+.container {
+  margin: 30px auto;
+}
+.top {
+  color: #33a687;
+  position: relative;
+  width: fit-content;
+}
+.top::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -15px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-color: transparent transparent #33a687 transparent;
+  border-style: solid;
+}
+.bottom {
+  color: #bb4b5b;
+  position: relative;
+  width: fit-content;
+}
+.bottom::before {
+  content: "";
+  position: absolute;
+  top: 65%;
+  left: -15px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-color: #bb4b5b transparent transparent transparent;
+  border-style: solid;
+}
+/* end components class */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Inter;
+}
+i {
+  margin-right: 5px;
+  font-size: 24px;
+}
+.face {
+  color: #148ef3;
+}
+.twitter {
+  color: #24a3f4;
+}
+.insta {
+  color: #cb7290;
+}
+.youtube {
+  color: #ba0022;
+}
+/* start meadia querie */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section .seconde-boxes .box,
+  section .main-boxes .box {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  header .container .mode button.dark-on {
+    left: 30px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 540px;
+    margin: 0 auto;
+  }
+  section .seconde-boxes .box {
+    width: 350px !important;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  section .seconde-boxes .box {
+    width: 350px !important;
+    margin: 0 auto;
+  }
+  header {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+  section .seconde-boxes .box {
+    width: 300px !important;
+  }
+  header {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .Dark-mode {
+  display: flex;
+}
+header .container .mode-name {
+  display: block;
+  margin-top: 8px;
+  margin-right: 30px;
+}
+header .container .mode {
+  width: 70px;
+  height: 30px;
+  border-radius: 12px;
+  position: relative;
+  background-color: #adb1cb;
+}
+header .container .mode button {
+  cursor: pointer;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f2f2f7;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transition: 0.2s;
+  transform: translatey(-50%);
+}
+header .container .mode button.dark-on {
+  left: 45px;
+}
+section .main-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+section .main-boxes .box {
+  padding: 10px;
+  text-align: center;
+  background-color: #f0f3fa;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+section .main-boxes .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+section .main-boxes .box:hover,
+.seconde-boxes .box:hover {
+  background-color: #e1e3f0 !important;
+}
+section .main-boxes .active:hover,
+.seconde-boxes .active:hover {
+  background-color: #333a56 !important;
+}
+section .main-boxes .one::after {
+  background-color: #148ef3;
+}
+section .main-boxes .two::after {
+  background-color: #24a3f4;
+}
+section .main-boxes .three::after {
+  background-color: #cb7290;
+}
+section .main-boxes .four::after {
+  background-color: #ba0022;
+}
+section .main-boxes .box .top,
+section .main-boxes .box .bottom {
+  margin: 0 auto;
+}
+section .main-boxes .box > div {
+  display: flex;
+  justify-content: center;
+}
+
+section .main-boxes .box h1 {
+  font-size: 45px;
+  color: #1c1f28;
+  margin: 10px;
+}
+section .main-boxes .box p {
+  padding-top: 10px;
+}
+section .main-boxes .box i {
+  margin-top: 10px;
+}
+section .main-boxes .box span:first-of-type {
+  letter-spacing: 6px;
+}
+section .main-boxes .box span {
+  display: block;
+  margin: 10px;
+}
+.Overview {
+  margin: 30px 0;
+  color: #606376;
+  font-size: 25px;
+  font-weight: bold;
+}
+section .seconde-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+section .seconde-boxes .box {
+  background-color: #f0f3fa;
+  border-radius: 10px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+}
+section .seconde-boxes .box .intro {
+  padding-bottom: 60px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+section .seconde-boxes .box .info {
+  color: #1c1f28;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+section .seconde-boxes .box .top,
+section .seconde-boxes .box .bottom {
+  font-size: 15px;
+  height: fit-content;
+}
