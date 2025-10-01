@@ -9,14 +9,7 @@ The selected mode is saved using _localStorage_, so it stays the same even after
 - Saves user preference in localStorage.
 - Styled boxes and text that adapt to the chosen mode.
 
-## Project Structure
 
-## How to Run
-
-1. Clone the repository or download the ZIP.
-2. Open index.html in your browser.
-
-## Preview
 
 When clicking the button:
 
